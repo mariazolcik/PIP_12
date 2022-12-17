@@ -74,48 +74,27 @@ public class Zadanie05 {
     }
     //do zadania4
     public static void wzor2(int x, int y, int z){
-        if(x>=y && y>=z){
-            for(int i=0; i<x; i++){
-                for(int j=0; j<3; j++){
-                    System.out.print("* ");
-                }
-                System.out.println(" ");
-            }
-        }else if(x>=z && z>=y){
-            for(int i=0; i<x; i++){
-                for(int j=0; j<3; j++){
-                    System.out.print("* ");
-                }
-                System.out.println(" ");
-            }
-        }else if(y>=x && x>=z){
-            for(int i=0; i<y; i++){
-                for(int j=0; j<3; j++){
-                    System.out.print("* ");
-                }
-                System.out.println(" ");
-            }
-        }else if(y>=z && z>=x){
-            for(int i=0; i<y; i++){
-                for(int j=0; j<3; j++){
-                    System.out.print("* ");
-                }
-                System.out.println(" ");
-            }
-        }else if(z>=x && x>=y){
-            for(int i=0; i<z; i++){
-                for(int j=0; j<3; j++){
-                    System.out.print("* ");
-                }
-                System.out.println(" ");
-            }
-        }else if(z>=y && y>=x){
-            for(int i=0; i<z; i++){
-                for(int j=0; j<3; j++){
-                    System.out.print("* ");
-                }
-                System.out.println(" ");
-            }
+        int najwyzsza;
+        if(x>=y && x>=z){
+            najwyzsza=x;
+        } else if(y>=x && y>=z){
+            najwyzsza=y;
+        } else{
+            najwyzsza=z;
+        }
+
+        boolean jeden, dwa, trzy;
+        for(int i=najwyzsza; i>=0; i--){
+            if (x<=i) jeden=false;
+            else jeden=true;
+
+            if(y<=i) dwa=false;
+            else dwa=true;
+
+            if(z<=i) trzy=false;
+            else trzy=true;
+
+            System.out.println((jeden==true ? "*":" ")+" "+(dwa==true ? "*":" ")+" "+(trzy==true ? "*":" "));
         }
     }
 
@@ -125,7 +104,7 @@ public class Zadanie05 {
         Random r = new Random();
 
 //Zadanie1
- /*       System.out.println("Podaj liczbę całkowitą n: ");
+        System.out.println("Podaj liczbę całkowitą n: ");
         int n= scan.nextInt();
         int i=0;
         ciagn(n,i);
@@ -139,7 +118,7 @@ public class Zadanie05 {
         System.out.println("Podaj parametr t: ");
         int t=scan.nextInt();
         wzor1podstawowy(t);
-        wzor1zaawansowany(t);*/
+        wzor1zaawansowany(t);
 
 //Zadanie4
         System.out.println("Podaj parametr x: ");
