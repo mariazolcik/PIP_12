@@ -85,14 +85,14 @@ public class Zadanie06 {
     public static void main(String[] args) {
 
         //Zadanie1
-        //tablican();
-        //tablica_liczb();
+        tablican();
+        tablica_liczb();
 
         //Zadanie2
-        //sortedTab();
+        sortedTab();
 
         //Zadanie3
-        //reverseTab();
+        reverseTab();
 
         //Zadanie4
     }
